@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation {
+            animation: pulse 1s linear infinite both;
+        }
+        /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+        
+        @media (prefers-reduced-motion: no-preference) {
+            .animation {
+                animation-name: dissolve;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation">animated box</div>
+</body>
+
+</html>

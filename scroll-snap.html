@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .scroller {
+            height: 300px;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-padding: 40px;
+        }
+        
+        .scroller section {
+            scroll-snap-align: start;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <article class="scroller">
+        <h1>Sticky Heading</h1>
+        <section>
+            <h2>Section one</h2>
+        </section>
+        <section>
+            <h2>Section two</h2>
+        </section>
+        <section>
+            <h2>Section three</h2>
+        </section>
+    </article>
+
+</body>
+
+</html>

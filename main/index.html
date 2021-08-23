@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .title {
+            color: white;
+            width: fit-content;
+            margin: auto;
+            font-size: 24px;
+        }
+        
+        @media (prefers-reduced-motion: no-preference) {
+            .title {
+                transition: .0;
+            }
+        }
+        
+        .title-transition {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+    <title>Home | Internet Freedom and Rights</title>
+</head>
+
+<body>
+    <div class="title-wrapper">
+        <div class="title title-transition">Internet Freedom and Rights</div>
+    </div>
+    <script>
+        // Remove the transition class
+        const title = document.querySelector('.title');
+        title.classList.remove('title-transition');
+
+        // Create the observer, same as before:
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    title.classList.add('title-transition');
+                    return;
+                }
+
+                title.classList.remove('title-transition');
+            });
+        });
+
+        observer.observe(document.querySelector('.title-wrapper'));
+    </script>
+</body>
+
+</html>
